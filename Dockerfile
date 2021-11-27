@@ -1,5 +1,6 @@
 FROM alpine:3.14.2
 
+# Use ARM based device (cubox-i) to build and push container
 # docker build -t docker-sane .
 
 
@@ -14,7 +15,7 @@ ENV DATA_PORT_RANGE="6567-6570" ALLOW_HOSTS="192.168.178.0/24"
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 
-# docker tag docker-sane:latest hcdaniel/docker-sane:1.0
+# docker tag docker-sane:latest hcdaniel/docker-sane:2.0
 # docker login
-# docker push hcdaniel/docker-sane:1.0
+# docker push hcdaniel/docker-sane:2.0
 
